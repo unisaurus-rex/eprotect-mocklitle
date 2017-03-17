@@ -27,9 +27,9 @@ var eventHandler = function (e) {
         var iframe = document.getElementById("vantiv-payframe");
         iframe.height = response.height;
     }
-    else {
-        configFromMerchant.callback(response);
-    }
+  else {
+    configFromMerchant.callback(response);
+  }
 };
 
 if (window.addEventListener) {
