@@ -1,5 +1,5 @@
-function fireInputsEmpty() {
-  var msg = JSON.stringify({action: "areAllInputsEmpty"});
+function fireAllInputsEmpty() {
+  var msg = JSON.stringify({action: "allInputsEmpty"});
   window.postMessage(msg, "*");  
 }
 

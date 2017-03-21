@@ -274,11 +274,11 @@ var eProtectPayFrame = function () {
   }
 
   /**
-   * @function areAllInputsEmpty
+   * @function allInputsEmpty
    * if pan and cvv are empty, post a message with value of true, otherwise post value of false
    */
-  var areAllInputsEmpty = function() {
-    console.log("payframe.js: areAllInputsEmpty");
+  var allInputsEmpty = function() {
+    console.log("payframe.js: allInputsEmpty");
 
     // get pan and cvv values and check their length
     var panValue = $("#accountNumber").val();
@@ -286,7 +286,7 @@ var eProtectPayFrame = function () {
     var inputsEmpty = (panValue.length == 0 && cvvValue.length == 0);
 
     // build response
-    var response = {"inputsEmpty" : inputsEmpty}; 
+    var response = {"allInputsEmpty" : inputsEmpty}; 
     var jsonPath = '/' + $("#appPath").val() + '/js/json2-20140404.min.js';
 
     // send response
@@ -328,8 +328,8 @@ var eProtectPayFrame = function () {
         }
       } else if (action === "getDocHeight") {
         getDocHeight();
-      } else if (action === "areAllInputsEmpty") {
-        areAllInputsEmpty();
+      } else if (action === "allInputsEmpty") {
+        allInputsEmpty();
       } else {
         console.log("payframe.js: received unknown action: " + event.data.action);
       }
